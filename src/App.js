@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TodoList from "./TodoList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{margin:'20px'}}>
+      <TodoList name='Coding Todolist' initialTodos={[{id:1, todo:'learn js', completed:false}]}/>
+      <TodoList name='Pre Camping Todolist' initialTodos={[{id:1, todo:'by wood', completed:true},{id:2, todo:'by food', completed:false}]}/>
+      {/* Mis use of this component */}
+      {/* <TodoList name='Bad TODOLIST' initialTodos={[{x:1, y:'by wood', z:false}]}/> */}
+      <TodoList name='Another List'/>
     </div>
   );
 }
